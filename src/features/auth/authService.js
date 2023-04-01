@@ -5,7 +5,7 @@ const API_URL = 'http://localhost:3000/api/v1/auth/'
 //Register user
 const register = async (userData) => {
     try {
-        const response = await axios.post(API_URL, userData);
+        const response = await axios.post(API_URL + 'register', userData);
         console.log(JSON.stringify(response.data));
         console.log(response.data.name);
         if(response.data) {
